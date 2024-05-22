@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&family=Russo+One&display=swap');
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family:Arial, Helvetica, sans-serif;
+}
+
+
+.logo img{
+     height:5.7rem;
+}
+.navbar{
+    
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 90%;
+     height: 12vh;
+     position: fixed;
+     top: 0;
+     left: 50%;
+     transform: translateX(-50%);
+}
+.navlist{
+     display: flex;
+     gap: 2.5rem;
+}
+.navlist li{
+      list-style: none;
+}
+.navlist a{
+      text-decoration: none; 
+      color: white;
+      font-size: 1.2rem;
+      letter-spacing: .08rem;
+}
+.hero{  
+     display: flex;
+     
+}
+.hero .left{
+     background: #2c1e1e;
+     padding-left: 3rem;
+    
+}
+.hero .right{
+        background: #7c573c;
+        justify-content: center;
+       
+}
+.hero .jojo{
+      width: 50%;
+      min-height: 100vh;
+      display:flex;
+      align-items: center;
+      
+}
+.navlist .slider{
+      background: rgba(255,255,255,0.345);
+      width: 6rem;
+      height: 5rem;
+      position: absolute;
+      top: 0;
+      right: 430px;
+      border-top: .3rem solid #2c1e1e;
+      border-radius: 0 0 2rem 2rem;
+      backdrop-filter: blur(.5rem);
+      z-index: -1;
+      transition: all .5s ease-in-out ;
+}
+.navlist li:nth-child(2):hover  ~.slider{
+       right:335px;
+}
+
+.navlist li:nth-child(3):hover  ~.slider{
+     right:225px;
+}
+
+.navlist li:nth-child(4):hover  ~.slider{
+     right:105px;
+}
+
+.navlist li:nth-child(5):hover  ~.slider{
+     right:-10px;
+}
+.left .contant{
+      color:white;
+}
+.contant h1{
+      font-size: 5rem;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: .1rem white;
+      letter-spacing: .2rem;
+      font-family: "Russo One", sans-serif;  
+  
+}
+.contant p{
+      color: rgba(255, 255, 255, 0.379);
+       font-size: 1.3rem;
+       width: 90%;
+       margin: 1.3rem 0;
+       line-height: 1.8rem;    
+}
+.contant button{
+      background :radial-gradient( at top left, #5a4740 , #2c1e1e);
+       padding: 1rem 3rem;
+       border: .1rem solid rgba(255, 255, 255, 0.286);
+       font-size: 1.3rem;
+       color: white;
+       border-radius: 4rem;
+       letter-spacing: .1rem;
+}
+.contant button:hover{
+
+     background: radial-gradient( at bottom right,#5a4740 , #2c1e1e);
+}
+.right img{
+     width: 55%;
+     clip-path:inset(105px 138px 23px 65px);
+     padding: 20px;
+     margin-bottom: 140px;
+     
+}
+.middle{
+     
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50% ,-50%);
+}
+.middle .circle{
+      width: 10rem;
+      height: 10rem;
+      background-color: white;
+      border-radius: 8rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      /*background-size: cover;*/
+}
+.middle .circle:nth-child(1){   
+
+     background-image: url(coffee\ powder.jpg);
+     background-size: 200px;
+     
+}
+    
+.middle .circle:nth-child(2){   
+     
+     margin: 2.5rem 0;
+     background-image: url(coffee\ beans.jpg);
+     background-size: 200px;
+
+}
+.middle .circle:nth-child(3){   
+     
+     background-image: url(coffee\ plant.jpg);
+     background-size: 200px;
+}
+.middle .circle::before{
+     content: "";
+     background-color:transparent;
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     border-radius: 8rem;
+     border: .20rem dashed white;
+     padding: .2rem;
+     
+}
+
