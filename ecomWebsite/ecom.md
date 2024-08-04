@@ -2,5 +2,5 @@
 
  ## project link
 
-[Click here] (https://stackblitz.com/edit/vitejs-vite-fatmup?file=main.js)
+[Click here] (https://stackblitz.com/edit/vitejs-vite-fatmup?file=index.html)
 
