@@ -39,6 +39,5 @@ submitBtn.addEventListener("click", async(e) => {
   console.log(str)
   resultCont.innerHTML = str
 })
-console.log("for checking ");
 
 
