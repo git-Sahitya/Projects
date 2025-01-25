@@ -40,4 +40,3 @@ submitBtn.addEventListener("click", async(e) => {
   resultCont.innerHTML = str
 })
 
-
