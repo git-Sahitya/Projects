@@ -10,16 +10,16 @@ const masterSongName = document.getElementById("masterSongName");
 const next = document.getElementById("next");
 const previous = document.getElementById("previous")
 const songs = [
-  { songName: "Song 1", filePath: "songs/1.mp3", coverPath: "covers/1.jpg" },
-  { songName: "Song 2", filePath: "songs/2.mp3", coverPath: "covers/2.jpg" },
-  { songName: "Song 3", filePath: "songs/3.mp3", coverPath: "covers/3.jpg" },
-  { songName: "Song 4", filePath: "songs/4.mp3", coverPath: "covers/4.jpg" },
-  { songName: "Song 5", filePath: "songs/5.mp3", coverPath: "covers/5.jpg" },
-  { songName: "Song 6", filePath: "songs/6.mp3", coverPath: "covers/6.jpg" },
-  { songName: "Song 7", filePath: "songs/7.mp3", coverPath: "covers/7.jpg" },
-  { songName: "Song 8", filePath: "songs/8.mp3", coverPath: "covers/8.jpg" },
-  { songName: "Song 9", filePath: "songs/9.mp3", coverPath: "covers/9.jpg" },
-  { songName: "Song 10", filePath: "songs/10.mp3", coverPath: "covers/10.jpg" },
+  { songName: "Let me love you", filePath: "songs/1.mp3", coverPath: "covers/1.jpg" },
+  { songName: "Flowers", filePath: "songs/2.mp3", coverPath: "covers/2.jpg" },
+  { songName: "Kill Bill", filePath: "songs/3.mp3", coverPath: "covers/3.jpg" },
+  { songName: "On My Way", filePath: "songs/4.mp3", coverPath: "covers/4.jpg" },
+  { songName: "Senorita", filePath: "songs/5.mp3", coverPath: "covers/5.jpg" },
+  { songName: "That's So True", filePath: "songs/6.mp3", coverPath: "covers/6.jpg" },
+  { songName: "Watermelon", filePath: "songs/7.mp3", coverPath: "covers/7.jpg" },
+  { songName: "Timeless", filePath: "songs/8.mp3", coverPath: "covers/8.jpg" },
+  { songName: "Die With A Smile", filePath: "songs/9.mp3", coverPath: "covers/9.jpg" },
+  { songName: "Not Like Us", filePath: "songs/10.mp3", coverPath: "covers/10.jpg" },
 ];
 
 // audioElement.play()
