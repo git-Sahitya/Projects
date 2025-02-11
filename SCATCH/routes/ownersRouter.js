@@ -21,13 +21,19 @@ if (process.env.NODE_ENV === "development") {
   });
 }
 
-router.get("/", (req, res) => {
-  res.send("ownerRouter Working!!");
+router.get("/admin", (req, res) => {
+  res.render("createproducts")
 });
+
+
+
+module.exports = router;
+
+
+
 
 //console.log((process.env.NODE_ENV));
 
-module.exports = router;
 
 // set node environment
 
