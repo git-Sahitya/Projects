@@ -7,7 +7,10 @@ module.exports.registerUser = async (req, res) => {
     let { fullname, email, password } = req.body;
 
     let user = await userModel.findOne({ email: email });
-    if (user) return res.status(401).send("Yot already have an account");
+    if (user) {
+      req.flash("error", "You are already have an account");
+      return res.redirect("/");
+    }
 
     bcrypt.genSalt(10, (err, salt) => {
       bcrypt.hash(password, salt, async (err, hash) => {
@@ -20,12 +23,12 @@ module.exports.registerUser = async (req, res) => {
           });
           let token = generateToken(user);
           res.cookie("token", token);
-          res.send("User Created Successfully!!");
+          res.redirect("/shop");
         }
       });
     });
   } catch (err) {
-    console.log(err.message);
+    res.send(err.message);
   }
 };
 
@@ -40,9 +43,10 @@ module.exports.loginUser = async (req, res) => {
     if (result) {
       let token = generateToken(user);
       res.cookie("token", token);
-      res.send("You are loggedIn");
+      res.redirect("/shop");
     } else {
-      return res.send("Email or password incorrect");
+      req.flash("error", "Email or Password incorrect");
+      return res.redirect("/");
     }
   });
 };

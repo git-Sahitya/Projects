@@ -15,6 +15,9 @@ const productsRouter = require("./routes/productsRouter.js");
 const usersRouter = require("./routes/usersRouter.js");
 const indexRouter = require("./routes/index");
 
+const db = require("./config/mongoose.connection.js");
+
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));

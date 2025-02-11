@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const config = require('config')
+const config = require("config");
 const debug = require("debug")("development:mongoose");
 mongoose
   .connect(`${config.get("MONGODB_URI")}/scatch`)
@@ -15,3 +15,7 @@ module.exports = mongoose.connection;
 // for stop to print   write this code in terminal
 
 //  Remove-item env:DEBUG
+
+
+//netstat -ano | findstr :3000
+//taskkill /PID 16036 /F
