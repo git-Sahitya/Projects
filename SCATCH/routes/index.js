@@ -11,8 +11,18 @@ router.get("/", (req, res) => {
 
 router.get("/shop", isLoggedIn, async (req, res) => {
   let products = await productModel.find();
-  let success = req.flash("success")
-  res.render("shop", { products , success });
+  let success = req.flash("success");
+  res.render("shop", { products, success });
+});
+
+router.get("/cart", isLoggedIn, async (req, res) => {
+  let user = await userModel
+    .findOne({ email: req.user.email })
+    .populate("cart");
+
+  const bill = Number(user.cart[0].price) + 20 - Number(user.cart[0].discount);
+
+  res.render("cart", { user, bill });
 });
 
 router.get("/addToCart/:productid", isLoggedIn, async (req, res) => {
@@ -20,7 +30,7 @@ router.get("/addToCart/:productid", isLoggedIn, async (req, res) => {
   user.cart.push(req.params.productid);
   await user.save();
   req.flash("success", "Added to cart");
-  res.redirect('/shop')
+  res.redirect("/shop");
 });
 
 router.get("/logout", isLoggedIn, (req, res) => {
