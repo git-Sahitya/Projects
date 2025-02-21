@@ -1,0 +1,27 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.left img {
+  width: 32px;
+  height: 23px;
+}
+.container {
+  max-width: 80vw;
+  margin: auto;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0 12px;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.semibold {
+    font-weight: 400;
+}
