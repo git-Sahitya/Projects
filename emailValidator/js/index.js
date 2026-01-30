@@ -23,7 +23,7 @@ submitBtn.addEventListener("click", async(e) => {
   console.log("clicked");     
   resultCont.innerHTML = ' <img width="123" src="img/loading.svg" alt="">'
 
-  let key = "ema_live_MARUzn8fp0Gaj3rRUN6v6GFIrf0JClnS0eT5Ne3N"
+  let key = "Enter your own api"
   let email = document.getElementById('username').value
   let url = `https://api.emailvalidation.io/v1/info?apikey=${key}&email=${email}`
   let res = await fetch(url)
@@ -39,4 +39,5 @@ submitBtn.addEventListener("click", async(e) => {
   console.log(str)
   resultCont.innerHTML = str
 })
+
 
